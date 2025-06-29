@@ -1,0 +1,13 @@
+{
+  "itemGroup.ilona_mod": "Example Mod Tab",
+  "block.ilona_mod.example_block": "Example Block",
+  "item.ilona_mod.example_item": "Example Item",
+
+  "ilona_mod.configuration.title": "Ilona Mod Configs",
+  "ilona_mod.configuration.section.ilona_mod.common.toml": "Ilona Mod Configs",
+  "ilona_mod.configuration.section.ilona_mod.common.toml.title": "Ilona Mod Configs",
+  "ilona_mod.configuration.items": "Item List",
+  "ilona_mod.configuration.logDirtBlock": "Log Dirt Block",
+  "ilona_mod.configuration.magicNumberIntroduction": "Magic Number Text",
+  "ilona_mod.configuration.magicNumber": "Magic Number"
+}
