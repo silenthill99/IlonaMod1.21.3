@@ -1,5 +1,8 @@
 package fr.silenthill99.ilona_mod;
 
+import fr.silenthill99.ilona_mod.init.ModItems;
+import fr.silenthill99.ilona_mod.utils.ModCreativeModeTabs;
+import fr.silenthill99.ilona_mod.utils.ModSoundEvents;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -35,6 +38,8 @@ public class Main {
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        ModItems.ITEMS.register(modEventBus);
+        ModCreativeModeTabs.CREATIVE_TABS.register(modEventBus);
         ModSoundEvents.SOUNDS.register(modEventBus);
     }
 

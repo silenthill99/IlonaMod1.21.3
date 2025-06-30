@@ -1,7 +1,7 @@
 package fr.silenthill99.ilona_mod.data;
 
 import fr.silenthill99.ilona_mod.Main;
-import fr.silenthill99.ilona_mod.ModSoundEvents;
+import fr.silenthill99.ilona_mod.utils.ModSoundEvents;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -15,7 +15,7 @@ public class SoundDefinitionGenerator extends SoundDefinitionsProvider {
 
     @Override
     public void registerSounds() {
-        add(ModSoundEvents.DANS_MA_FUSEE, SoundDefinition.definition()
-                .with(sound(ResourceLocation.fromNamespaceAndPath(Main.MODID, "03_dans_ma_fusee"))));
+        add(ModSoundEvents.UN_MONDE_PARFAIT, SoundDefinition.definition()
+                .with(sound(ResourceLocation.fromNamespaceAndPath(Main.MODID, "01_un_monde_parfait"))));
     }
 }
