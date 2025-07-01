@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("itemGroup.un_monde_parfait"))
                     .displayItems((input, output) -> {
                         output.accept(ModItems.ALBUM_UMP);
+                        output.accept(ModItems.UN_MONDE_PARFAIT);
                     })
                     .build()
     );
