@@ -1,8 +1,10 @@
 package fr.silenthill99.ilona_mod;
 
+import fr.silenthill99.ilona_mod.init.ModBlocks;
 import fr.silenthill99.ilona_mod.init.ModItems;
 import fr.silenthill99.ilona_mod.utils.ModCreativeModeTabs;
 import fr.silenthill99.ilona_mod.utils.ModSoundEvents;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -39,6 +41,7 @@ public class Main {
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
         ModItems.ITEMS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
         ModCreativeModeTabs.CREATIVE_TABS.register(modEventBus);
         ModSoundEvents.SOUNDS.register(modEventBus);
     }
@@ -49,7 +52,9 @@ public class Main {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ILONITE_BLOCK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
