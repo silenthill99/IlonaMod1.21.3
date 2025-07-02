@@ -19,6 +19,7 @@ public class BlockLootSubGenerator extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.ILONITE_BLOCK.get());
+        dropSelf(ModBlocks.ILONITE_ORE.get());
     }
 
     @Override

@@ -25,4 +25,10 @@ public class ModItems {
                             .jukeboxPlayable(ModSoundEvents.convertToJukeboxSong(ModSoundEvents.UN_MONDE_PARFAIT))
                             .setId(ResourceKey.create(Registries.ITEM, output))
             ));
+
+    public static final DeferredItem<Item> ILONITE = (DeferredItem<Item>) ITEMS.register("ilonite",
+            output -> new Item(
+                    new Item.Properties()
+                            .setId(ResourceKey.create(Registries.ITEM, output))
+            ));
 }

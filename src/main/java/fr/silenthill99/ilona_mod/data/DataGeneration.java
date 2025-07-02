@@ -3,7 +3,10 @@ package fr.silenthill99.ilona_mod.data;
 import fr.silenthill99.ilona_mod.Main;
 import fr.silenthill99.ilona_mod.data.loot_tables.LootTableGenerator;
 import fr.silenthill99.ilona_mod.data.models.BlockStateGenerator;
+import fr.silenthill99.ilona_mod.data.models.ItemModelGenerator;
+import fr.silenthill99.ilona_mod.data.recipes.RecipeGenerator;
 import fr.silenthill99.ilona_mod.data.tags.BlockTagsGenerator;
+import fr.silenthill99.ilona_mod.data.tags.ItemTagsGenerator;
 import fr.silenthill99.ilona_mod.utils.ModSoundEvents;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
@@ -50,7 +53,9 @@ public class DataGeneration {
         generator.addProvider(client, new ItemModelGenerator(packOutput, existingFileHelper));
         generator.addProvider(client, new BlockStateGenerator(packOutput, existingFileHelper));
 
-        generator.addProvider(server, new BlockTagsGenerator(packOutput, lookupProvider, existingFileHelper));
+        BlockTagsGenerator blockTagsGenerator = generator.addProvider(server, new BlockTagsGenerator(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(server, new ItemTagsGenerator(packOutput, lookupProvider, blockTagsGenerator.contentsGetter()));
         generator.addProvider(server, new LootTableGenerator(packOutput, lookupProvider));
+        generator.addProvider(server, new RecipeGenerator.Runner(packOutput, lookupProvider));
     }
 }

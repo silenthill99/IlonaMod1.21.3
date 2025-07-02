@@ -54,6 +54,10 @@ public class Main {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.ILONITE_BLOCK);
+            event.accept(ModBlocks.ILONITE_ORE);
+        }
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.ILONITE);
         }
     }
 

@@ -1,4 +1,4 @@
-package fr.silenthill99.ilona_mod.data;
+package fr.silenthill99.ilona_mod.data.models;
 
 import fr.silenthill99.ilona_mod.Main;
 import fr.silenthill99.ilona_mod.init.ModItems;
@@ -27,5 +27,7 @@ public class ItemModelGenerator extends ItemModelProvider {
             withExistingParent(BuiltInRegistries.ITEM.getKey(cd).getPath(), "item/generated")
                     .texture("layer0", ResourceLocation.fromNamespaceAndPath(Main.MODID, "item/cd"));
         }
+
+        basicItem(ModItems.ILONITE.get());
     }
 }

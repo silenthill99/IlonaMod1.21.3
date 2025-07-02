@@ -14,5 +14,6 @@ public class BlockStateGenerator extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         simpleBlockWithItem(ModBlocks.ILONITE_BLOCK.get(), models().cubeAll("ilonite_block", blockTexture(ModBlocks.ILONITE_BLOCK.get())));
+        simpleBlockWithItem(ModBlocks.ILONITE_ORE.get(), models().cubeAll("ilonite_ore", blockTexture(ModBlocks.ILONITE_ORE.get())));
     }
 }

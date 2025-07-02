@@ -1,4 +1,7 @@
-// 1.21.3	2025-07-01T17:57:00.2135482	Block States: ilona_mod
+// 1.21.3	2025-07-02T11:36:03.1213217	Block States: ilona_mod
 aaac8e8d0beafb1534ff3a4bd533fd9f2eaccceb assets/ilona_mod/blockstates/ilonite_block.json
+00ec1fe2e3250f6ac06d97ef92fa89c4b1956b46 assets/ilona_mod/blockstates/ilonite_ore.json
 7819b0ed4f70b97089a347f34157bb24d0aed676 assets/ilona_mod/models/block/ilonite_block.json
+cad0e2c54fb39ff4ce24adcea64b4b763b6d1847 assets/ilona_mod/models/block/ilonite_ore.json
 d4146467d4ccb044ec0f96fc592eae6a13a73e37 assets/ilona_mod/models/item/ilonite_block.json
+55f02d9b7624111fa3e5155b4565dc991435f534 assets/ilona_mod/models/item/ilonite_ore.json

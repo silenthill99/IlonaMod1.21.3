@@ -25,6 +25,14 @@ public class ModBlocks {
                             .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Main.MODID, "ilonite_block")))
             ));
 
+    public static final DeferredBlock<Block> ILONITE_ORE = registerBlock("ilonite_ore",
+            () -> new Block(
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
+                            .strength(3, 5)
+                            .requiresCorrectToolForDrops()
+                            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Main.MODID, "ilonite_ore")))
+            ));
+
     public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> supplier) {
         DeferredBlock<T> block = (DeferredBlock<T>) BLOCKS.register(name, supplier);
         ModItems.ITEMS.register(name, output -> new BlockItem(block.get(),

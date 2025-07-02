@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#ilona_mod:needs_ilonite_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_netherite_tool"
+  ]
+}

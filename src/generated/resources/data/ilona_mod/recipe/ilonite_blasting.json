@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.8,
+  "ingredient": "ilona_mod:ilonite_ore",
+  "result": {
+    "count": 1,
+    "id": "ilona_mod:ilonite"
+  }
+}

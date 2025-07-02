@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "ilona_mod:ilonite",
+    "ilona_mod:ilonite",
+    "ilona_mod:ilonite",
+    "ilona_mod:ilonite",
+    "ilona_mod:ilonite",
+    "ilona_mod:ilonite",
+    "ilona_mod:ilonite",
+    "ilona_mod:ilonite",
+    "ilona_mod:ilonite"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ilona_mod:ilonite_block"
+  }
+}
