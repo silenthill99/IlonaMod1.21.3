@@ -41,6 +41,14 @@ public class RecipeGenerator extends RecipeProvider {
                 .requires(ModBlocks.ILONITE_BLOCK.get())
                 .unlockedBy("unlock", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.ILONITE_BLOCK))
                 .save(output);
+
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.BUILDING_BLOCKS, new ItemStack(ModBlocks.ILONITE_STAIRS.get()).getItem(), 4)
+                .pattern("0  ")
+                .pattern("00 ")
+                .pattern("000")
+                .define('0', ModBlocks.ILONITE_BLOCK.get())
+                .unlockedBy("unlock", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.ILONITE_BLOCK))
+                .save(output);
     }
 
     public static class Runner extends RecipeProvider.Runner {

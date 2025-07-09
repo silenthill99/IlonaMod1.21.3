@@ -55,6 +55,7 @@ public class Main {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.ILONITE_BLOCK);
             event.accept(ModBlocks.ILONITE_ORE);
+            event.accept(ModBlocks.ILONITE_STAIRS);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ILONITE);

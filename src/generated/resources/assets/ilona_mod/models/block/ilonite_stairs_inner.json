@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "ilona_mod:block/ilonite_block",
+    "side": "ilona_mod:block/ilonite_block",
+    "top": "ilona_mod:block/ilonite_block"
+  }
+}

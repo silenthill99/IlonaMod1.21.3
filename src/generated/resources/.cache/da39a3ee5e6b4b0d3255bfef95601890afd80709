@@ -1,4 +1,5 @@
-// 1.21.3	2025-07-02T14:05:03.1558441	
+// 1.21.3	2025-07-05T13:00:24.4435321	
+44fc1debeed704a501da2262299ea9ce807ba306 data/ilona_mod/advancement/recipes/building_blocks/ilonite_stairs.json
 dfd14a7c053730d725ce25f0692b76cc06013c85 data/ilona_mod/advancement/recipes/misc/ilonite.json
 74e50c52630a43599c83db2786b2dbf163344096 data/ilona_mod/advancement/recipes/misc/ilonite_blasting.json
 e658cb0c8fdc425c5288fcd6e7383b5bd748f3f5 data/ilona_mod/advancement/recipes/misc/ilonite_block.json
@@ -7,3 +8,4 @@ e658cb0c8fdc425c5288fcd6e7383b5bd748f3f5 data/ilona_mod/advancement/recipes/misc
 0dc4b9c8fc11cbe20640e7e04948d2cb9f09b72f data/ilona_mod/recipe/ilonite_blasting.json
 04dfe339884e369c3652c1253fa58a6308108187 data/ilona_mod/recipe/ilonite_block.json
 3e40e172705f96510ff13233b2d328b726155011 data/ilona_mod/recipe/ilonite_smelting.json
+b37339dd91ecb64f9bbe84ca348e2134c6677cf5 data/ilona_mod/recipe/ilonite_stairs.json

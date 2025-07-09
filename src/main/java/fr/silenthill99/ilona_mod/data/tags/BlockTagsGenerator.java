@@ -21,11 +21,13 @@ public class BlockTagsGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
         tag(BlockTags.NEEDS_IRON_TOOL).add(
-                ModBlocks.ILONITE_BLOCK.get()
+                ModBlocks.ILONITE_BLOCK.get(),
+                ModBlocks.ILONITE_STAIRS.get()
         );
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
-                ModBlocks.ILONITE_BLOCK.get()
+                ModBlocks.ILONITE_BLOCK.get(),
+                ModBlocks.ILONITE_STAIRS.get()
         );
 
         tag(ModTags.ModBlockTags.NEEDS_ILONITE_TOOL);

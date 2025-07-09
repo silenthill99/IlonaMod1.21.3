@@ -1,7 +1,12 @@
-// 1.21.3	2025-07-02T11:36:03.1213217	Block States: ilona_mod
+// 1.21.3	2025-07-05T12:45:04.496505	Block States: ilona_mod
 aaac8e8d0beafb1534ff3a4bd533fd9f2eaccceb assets/ilona_mod/blockstates/ilonite_block.json
 00ec1fe2e3250f6ac06d97ef92fa89c4b1956b46 assets/ilona_mod/blockstates/ilonite_ore.json
+8861a4b8bf4b1d582b3d91c4f60ae27ef121d6e8 assets/ilona_mod/blockstates/ilonite_stairs.json
 7819b0ed4f70b97089a347f34157bb24d0aed676 assets/ilona_mod/models/block/ilonite_block.json
 cad0e2c54fb39ff4ce24adcea64b4b763b6d1847 assets/ilona_mod/models/block/ilonite_ore.json
+f546402e6ac757524e767fffc08b8798c82fe5fe assets/ilona_mod/models/block/ilonite_stairs.json
+efa3612aa012b7fdca3ff8731fc8a00ab4e003bc assets/ilona_mod/models/block/ilonite_stairs_inner.json
+3b1342112affdd3536235b9f6e7ef3983ecd3fa7 assets/ilona_mod/models/block/ilonite_stairs_outer.json
 d4146467d4ccb044ec0f96fc592eae6a13a73e37 assets/ilona_mod/models/item/ilonite_block.json
 55f02d9b7624111fa3e5155b4565dc991435f534 assets/ilona_mod/models/item/ilonite_ore.json
+a77120d516f10e31e052dcadca9facee6228c37c assets/ilona_mod/models/item/ilonite_stairs.json
