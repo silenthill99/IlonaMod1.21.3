@@ -8,6 +8,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -38,6 +39,11 @@ public class ModBlocks {
             () -> new StairBlock(ModBlocks.ILONITE_BLOCK.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(ModBlocks.ILONITE_BLOCK.get())
                             .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Main.MODID, "ilonite_stairs")))
+            ));
+
+    public static final DeferredBlock<FenceBlock> ILONITE_FENCE = registerBlock("ilonite_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(ILONITE_BLOCK.get())
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Main.MODID, "ilonite_fence")))
             ));
 
     public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> supplier) {

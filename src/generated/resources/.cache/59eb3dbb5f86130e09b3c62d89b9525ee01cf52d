@@ -1,4 +1,5 @@
-// 1.21.3	2025-07-05T12:42:36.9905749	Loot Tables
+// 1.21.3	2025-07-09T19:31:58.5774831	Loot Tables
 5daf3b5eff5758eea4f0f970e236455b4eda9c07 data/ilona_mod/loot_table/blocks/ilonite_block.json
+f89a2556255b4c15efc6d48abda93acd9de0f552 data/ilona_mod/loot_table/blocks/ilonite_fence.json
 55682c56ae91279bb17082564e46718385fa63d0 data/ilona_mod/loot_table/blocks/ilonite_ore.json
 bb69a188669c0543553e230a5f61804b55c552bc data/ilona_mod/loot_table/blocks/ilonite_stairs.json

@@ -27,13 +27,20 @@ public class BlockTagsGenerator extends BlockTagsProvider {
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 ModBlocks.ILONITE_BLOCK.get(),
-                ModBlocks.ILONITE_STAIRS.get()
+                ModBlocks.ILONITE_STAIRS.get(),
+                ModBlocks.ILONITE_FENCE.get()
         );
 
-        tag(ModTags.ModBlockTags.NEEDS_ILONITE_TOOL);
+        tag(ModTags.ModBlockTags.NEEDS_ILONITE_TOOL).add(
+                ModBlocks.ILONITE_FENCE.get()
+        );
 
         tag(ModTags.ModBlockTags.INCORRECT_FOR_ILONITE_TOOL).addTag(
                 BlockTags.INCORRECT_FOR_NETHERITE_TOOL
         ).remove(ModTags.ModBlockTags.NEEDS_ILONITE_TOOL);
+
+        tag(BlockTags.FENCES).add(
+                ModBlocks.ILONITE_FENCE.get()
+        );
     }
 }
