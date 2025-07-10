@@ -17,7 +17,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.createBlocks(Main.MODID);
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Main.MODID);
 
     public static final DeferredBlock<Block> ILONITE_BLOCK = registerBlock("ilonite_block",
             () -> new Block(
@@ -39,15 +39,17 @@ public class ModBlocks {
             () -> new StairBlock(ModBlocks.ILONITE_BLOCK.get().defaultBlockState(),
                     BlockBehaviour.Properties.ofFullCopy(ModBlocks.ILONITE_BLOCK.get())
                             .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Main.MODID, "ilonite_stairs")))
+                            .requiresCorrectToolForDrops()
             ));
 
     public static final DeferredBlock<FenceBlock> ILONITE_FENCE = registerBlock("ilonite_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(ILONITE_BLOCK.get())
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Main.MODID, "ilonite_fence")))
+                    .requiresCorrectToolForDrops()
             ));
 
     public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> supplier) {
-        DeferredBlock<T> block = (DeferredBlock<T>) BLOCKS.register(name, supplier);
+        DeferredBlock<T> block = BLOCKS.register(name, supplier);
         ModItems.ITEMS.register(name, output -> new BlockItem(block.get(),
                 new Item.Properties()
                         .useBlockDescriptionPrefix()

@@ -1,6 +1,6 @@
-// 1.21.3	2025-07-09T20:12:42.1859333	Tags for minecraft:block mod id ilona_mod
-cf235679c9ae7722e302de7e324330dac4cf8113 data/ilona_mod/tags/block/incorrect_for_ilonite_tool.json
-da5f6b6d2752cdb24f0e2aa48558e9db3eda15a1 data/ilona_mod/tags/block/needs_ilonite_tool.json
+// 1.21.3	2025-07-10T21:15:49.4055279	Tags for minecraft:block mod id ilona_mod
+0065922cb9f3bdda535e9623e8c44fecc807c08c data/ilona_mod/tags/block/incorrect_for_copper_tool.json
+b0b8a1b4fe743d725d252d601858b854b3eaee5d data/ilona_mod/tags/block/needs_copper_tool.json
 da5f6b6d2752cdb24f0e2aa48558e9db3eda15a1 data/minecraft/tags/block/fences.json
-d28472b0d3c1e7dcef4e2f54836c3811d1f369c3 data/minecraft/tags/block/mineable/pickaxe.json
-9cf579027f3dc4d84fff4c1143400467dfe1f169 data/minecraft/tags/block/needs_iron_tool.json
+9cf579027f3dc4d84fff4c1143400467dfe1f169 data/minecraft/tags/block/mineable/pickaxe.json
+ca9e4ab276ac66927d58b31b3496717f81bc5207 data/minecraft/tags/block/needs_iron_tool.json

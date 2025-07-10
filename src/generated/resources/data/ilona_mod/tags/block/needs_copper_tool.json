@@ -1,6 +1,6 @@
 {
   "values": [
     "ilona_mod:ilonite_block",
-    "ilona_mod:ilonite_stairs"
+    "#minecraft:needs_stone_tool"
   ]
 }

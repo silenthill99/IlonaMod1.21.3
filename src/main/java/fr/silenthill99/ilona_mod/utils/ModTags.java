@@ -1,8 +1,8 @@
 package fr.silenthill99.ilona_mod.utils;
 
 import fr.silenthill99.ilona_mod.Main;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -12,11 +12,13 @@ public class ModTags {
     public static class ModBlockTags {
 
         public static final TagKey<Block> NEEDS_ILONITE_TOOL = createTag("needs_ilonite_tool");
-
         public static final TagKey<Block> INCORRECT_FOR_ILONITE_TOOL = createTag("incorrect_for_ilonite_tool");
 
+        public static final TagKey<Block> NEEDS_COPPER_TOOL = createTag("needs_copper_tool");
+        public static final TagKey<Block> INCORRECT_FOR_COPPER_TOOL = createTag("incorrect_for_copper_tool");
+
         public static TagKey<Block> createTag(String name) {
-            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Main.MODID, name));
+            return TagKey.create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath(Main.MODID, name));
         }
     }
 

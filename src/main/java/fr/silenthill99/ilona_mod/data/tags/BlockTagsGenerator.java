@@ -21,26 +21,24 @@ public class BlockTagsGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
         tag(BlockTags.NEEDS_IRON_TOOL).add(
-                ModBlocks.ILONITE_BLOCK.get(),
                 ModBlocks.ILONITE_STAIRS.get()
         );
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 ModBlocks.ILONITE_BLOCK.get(),
-                ModBlocks.ILONITE_STAIRS.get(),
-                ModBlocks.ILONITE_FENCE.get()
+                ModBlocks.ILONITE_STAIRS.get()
         );
-
-        tag(ModTags.ModBlockTags.NEEDS_ILONITE_TOOL).add(
-                ModBlocks.ILONITE_FENCE.get()
-        );
-
-        tag(ModTags.ModBlockTags.INCORRECT_FOR_ILONITE_TOOL).addTag(
-                BlockTags.INCORRECT_FOR_NETHERITE_TOOL
-        ).remove(ModTags.ModBlockTags.NEEDS_ILONITE_TOOL);
 
         tag(BlockTags.FENCES).add(
                 ModBlocks.ILONITE_FENCE.get()
         );
+
+        tag(ModTags.ModBlockTags.NEEDS_COPPER_TOOL).add(
+                ModBlocks.ILONITE_BLOCK.get()
+        ).addTag(BlockTags.NEEDS_STONE_TOOL);
+
+        tag(ModTags.ModBlockTags.INCORRECT_FOR_COPPER_TOOL).addTag(
+                BlockTags.INCORRECT_FOR_STONE_TOOL
+        ).remove(ModTags.ModBlockTags.NEEDS_COPPER_TOOL);
     }
 }
