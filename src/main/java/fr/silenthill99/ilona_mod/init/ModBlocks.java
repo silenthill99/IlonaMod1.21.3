@@ -45,7 +45,6 @@ public class ModBlocks {
     public static final DeferredBlock<FenceBlock> ILONITE_FENCE = registerBlock("ilonite_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(ILONITE_BLOCK.get())
                     .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Main.MODID, "ilonite_fence")))
-                    .requiresCorrectToolForDrops()
             ));
 
     public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> supplier) {

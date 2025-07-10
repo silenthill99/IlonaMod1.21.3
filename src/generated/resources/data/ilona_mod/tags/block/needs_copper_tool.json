@@ -1,6 +1,6 @@
 {
   "values": [
     "ilona_mod:ilonite_block",
-    "#minecraft:needs_stone_tool"
+    "#neoforge:needs_netherite_tool"
   ]
 }

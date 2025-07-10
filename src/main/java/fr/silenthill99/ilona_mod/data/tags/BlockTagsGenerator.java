@@ -6,6 +6,7 @@ import fr.silenthill99.ilona_mod.utils.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
@@ -20,25 +21,49 @@ public class BlockTagsGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
-        tag(BlockTags.NEEDS_IRON_TOOL).add(
-                ModBlocks.ILONITE_STAIRS.get()
-        );
-
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 ModBlocks.ILONITE_BLOCK.get(),
                 ModBlocks.ILONITE_STAIRS.get()
         );
 
-        tag(BlockTags.FENCES).add(
-                ModBlocks.ILONITE_FENCE.get()
+        tag(Tags.Blocks.NEEDS_WOOD_TOOL);
+        tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
+                .add(ModBlocks.ILONITE_BLOCK.get());
+
+        tag(Tags.Blocks.NEEDS_GOLD_TOOL);
+        tag(BlockTags.INCORRECT_FOR_GOLD_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
+                .remove(Tags.Blocks.NEEDS_WOOD_TOOL);
+
+        tag(BlockTags.INCORRECT_FOR_STONE_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_GOLD_TOOL)
+                .remove(BlockTags.NEEDS_STONE_TOOL);
+
+        tag(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_STONE_TOOL)
+                .remove(BlockTags.NEEDS_IRON_TOOL);
+        tag(BlockTags.NEEDS_IRON_TOOL).add(
+                ModBlocks.ILONITE_STAIRS.get()
         );
+
+        tag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .remove(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        tag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .remove(Tags.Blocks.NEEDS_NETHERITE_TOOL);
+
+        tag(ModTags.ModBlockTags.INCORRECT_FOR_COPPER_TOOL).addTag(
+                BlockTags.INCORRECT_FOR_NETHERITE_TOOL
+        ).remove(ModTags.ModBlockTags.NEEDS_COPPER_TOOL);
 
         tag(ModTags.ModBlockTags.NEEDS_COPPER_TOOL).add(
                 ModBlocks.ILONITE_BLOCK.get()
-        ).addTag(BlockTags.NEEDS_STONE_TOOL);
+        ).addTag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
 
-        tag(ModTags.ModBlockTags.INCORRECT_FOR_COPPER_TOOL).addTag(
-                BlockTags.INCORRECT_FOR_STONE_TOOL
-        ).remove(ModTags.ModBlockTags.NEEDS_COPPER_TOOL);
+        tag(BlockTags.FENCES).add(
+                ModBlocks.ILONITE_FENCE.get()
+        );
     }
 }
