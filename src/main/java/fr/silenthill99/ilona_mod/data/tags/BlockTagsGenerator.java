@@ -27,7 +27,7 @@ public class BlockTagsGenerator extends BlockTagsProvider {
         );
 
         tag(Tags.Blocks.NEEDS_WOOD_TOOL);
-        tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
+        tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL).remove(Tags.Blocks.NEEDS_WOOD_TOOL)
                 .add(ModBlocks.ILONITE_BLOCK.get());
 
         tag(Tags.Blocks.NEEDS_GOLD_TOOL);
@@ -54,13 +54,15 @@ public class BlockTagsGenerator extends BlockTagsProvider {
                 .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
                 .remove(Tags.Blocks.NEEDS_NETHERITE_TOOL);
 
-        tag(ModTags.ModBlockTags.INCORRECT_FOR_COPPER_TOOL).addTag(
-                BlockTags.INCORRECT_FOR_NETHERITE_TOOL
-        ).remove(ModTags.ModBlockTags.NEEDS_COPPER_TOOL);
-
-        tag(ModTags.ModBlockTags.NEEDS_COPPER_TOOL).add(
+        tag(ModTags.ModBlockTags.NEEDS_ILONITE_TOOL).add(
                 ModBlocks.ILONITE_BLOCK.get()
-        ).addTag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
+        );
+
+        tag(ModTags.ModBlockTags.INCORRECT_FOR_ILONITE_TOOL).addTag(
+                BlockTags.INCORRECT_FOR_NETHERITE_TOOL
+        ).remove(
+                ModTags.ModBlockTags.NEEDS_ILONITE_TOOL
+        );
 
         tag(BlockTags.FENCES).add(
                 ModBlocks.ILONITE_FENCE.get()

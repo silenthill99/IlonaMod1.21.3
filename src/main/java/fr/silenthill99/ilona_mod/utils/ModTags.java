@@ -14,9 +14,6 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_ILONITE_TOOL = createTag("needs_ilonite_tool");
         public static final TagKey<Block> INCORRECT_FOR_ILONITE_TOOL = createTag("incorrect_for_ilonite_tool");
 
-        public static final TagKey<Block> NEEDS_COPPER_TOOL = createTag("needs_copper_tool");
-        public static final TagKey<Block> INCORRECT_FOR_COPPER_TOOL = createTag("incorrect_for_copper_tool");
-
         public static TagKey<Block> createTag(String name) {
             return TagKey.create(BuiltInRegistries.BLOCK.key(), ResourceLocation.fromNamespaceAndPath(Main.MODID, name));
         }

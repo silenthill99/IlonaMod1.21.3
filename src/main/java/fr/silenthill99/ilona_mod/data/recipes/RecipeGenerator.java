@@ -60,6 +60,15 @@ public class RecipeGenerator extends RecipeProvider {
                 .define('1', Items.STICK)
                 .unlockedBy("unlock", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.ILONITE_BLOCK, Items.STICK))
                 .save(output);
+
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, new ItemStack(ModItems.ILONITE_PICKAXE.get()))
+                .pattern("000")
+                .pattern(" 1 ")
+                .pattern(" 1 ")
+                .define('0', ModItems.ILONITE)
+                .define('1', Items.STICK)
+                .unlockedBy("unlock", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.ILONITE, Items.STICK))
+                .save(output);
     }
 
     public static class Runner extends RecipeProvider.Runner {

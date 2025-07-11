@@ -21,42 +21,6 @@ public class ModItems {
 
     public static final DeferredItem<Item> ILONITE = ITEMS.registerItem("ilonite", Item::new);
 
-    public static final DeferredItem<SwordItem> COPPER_SWORD = ITEMS.registerItem(
-            "copper_sword",
-            props -> new SwordItem(
-                    ModToolMaterial.COPPER_MATERIAL,
-                    3,
-                    -2.4f,
-                    props
-            )
-    );
-
-    public static final DeferredItem<AxeItem> COPPER_AXE = ITEMS.registerItem("copper_axe",
-            props -> new AxeItem(
-                    ModToolMaterial.COPPER_MATERIAL,
-                    3,
-                    -2.4f,
-                    props
-            ));
-    public static final DeferredItem<PickaxeItem> COPPER_PICKAXE = ITEMS.registerItem("copper_pickaxe",
-            props -> new PickaxeItem(
-                    ModToolMaterial.COPPER_MATERIAL,
-                    1,
-                    -2.4f,
-                    props
-            ));
-    public static final DeferredItem<ShovelItem> COPPER_SHOVEL = ITEMS.registerItem("copper_shovel",
-            props -> new ShovelItem(
-                    ModToolMaterial.COPPER_MATERIAL,
-                    1.5f,
-                    -2.4f,
-                    props
-            ));
-    public static final DeferredItem<HoeItem> COPPER_HOE = ITEMS.registerItem("copper_hoe",
-            props -> new HoeItem(
-                    ModToolMaterial.COPPER_MATERIAL,
-                    -1,
-                    -2.4f,
-                    props
-            ));
+    public static final DeferredItem<Item> ILONITE_PICKAXE = ITEMS.registerItem("ilonite_pickaxe",
+            properties -> new PickaxeItem(ModToolMaterial.ILONITE_TOOLS, 1, -2.8f, properties));
 }

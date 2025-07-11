@@ -1,7 +1,4 @@
 {
-  "remove": [
-    "#neoforge:needs_wood_tool"
-  ],
   "values": [
     "ilona_mod:ilonite_block"
   ]
