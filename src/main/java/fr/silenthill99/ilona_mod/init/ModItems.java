@@ -3,8 +3,6 @@ package fr.silenthill99.ilona_mod.init;
 import fr.silenthill99.ilona_mod.Main;
 import fr.silenthill99.ilona_mod.utils.ModSoundEvents;
 import fr.silenthill99.ilona_mod.utils.ModToolMaterial;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -12,26 +10,16 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Main.MODID);
 
-    public static final DeferredItem<Item> ALBUM_UMP = ITEMS.register("album_ump",
-            output -> new Item(
-                    new Item.Properties()
-                            .setId(ResourceKey.create(Registries.ITEM, output))
-            )
-    );
+    public static final DeferredItem<Item> ALBUM_UMP = ITEMS.registerItem("album_ump", Item::new);
 
-    public static final DeferredItem<Item> UN_MONDE_PARFAIT = ITEMS.register("un_monde_parfait",
-            output -> new Item(
-                    new Item.Properties()
+    public static final DeferredItem<Item> UN_MONDE_PARFAIT = ITEMS.registerItem("un_monde_parfait",
+            properties -> new Item(
+                    properties
                             .stacksTo(1)
-                            .jukeboxPlayable(ModSoundEvents.convertToJukeboxSong(ModSoundEvents.UN_MONDE_PARFAIT))
-                            .setId(ResourceKey.create(Registries.ITEM, output))
+                            .jukeboxPlayable(ModSoundEvents.convertToJukeboxSong("un_monde_parfait"))
             ));
 
-    public static final DeferredItem<Item> ILONITE = ITEMS.register("ilonite",
-            output -> new Item(
-                    new Item.Properties()
-                            .setId(ResourceKey.create(Registries.ITEM, output))
-            ));
+    public static final DeferredItem<Item> ILONITE = ITEMS.registerItem("ilonite", Item::new);
 
     public static final DeferredItem<SwordItem> COPPER_SWORD = ITEMS.registerItem(
             "copper_sword",
