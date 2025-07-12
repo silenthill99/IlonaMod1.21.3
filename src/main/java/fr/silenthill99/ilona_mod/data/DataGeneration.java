@@ -38,10 +38,16 @@ public class DataGeneration {
                 server,
                 new DatapackBuiltinEntriesProvider(packOutput, event.getLookupProvider(), new RegistrySetBuilder()
                         .add(Registries.JUKEBOX_SONG, bootstrap -> {
-                            bootstrap.register(ModSoundEvents.convertToJukeboxSong("un_monde_parfait"), new JukeboxSong(
+                            bootstrap.register(ModSoundEvents.convertToJukeboxSong(ModSoundEvents.UN_MONDE_PARFAIT.get()), new JukeboxSong(
                                     ModSoundEvents.UN_MONDE_PARFAIT,
                                     Component.translatable("ilona_mod.sounds.un_monde_parfait"),
                                     186,
+                                    0
+                            ));
+                            bootstrap.register(ModSoundEvents.convertToJukeboxSong(ModSoundEvents.CEST_LES_VACANCES.get()), new JukeboxSong(
+                                    ModSoundEvents.CEST_LES_VACANCES,
+                                    Component.translatable("ilona_mod.sounds.cest_les_vacances"),
+                                    229,
                                     0
                             ));
                         }),

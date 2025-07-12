@@ -17,5 +17,7 @@ public class SoundDefinitionGenerator extends SoundDefinitionsProvider {
     public void registerSounds() {
         add(ModSoundEvents.UN_MONDE_PARFAIT, SoundDefinition.definition()
                 .with(sound(ResourceLocation.fromNamespaceAndPath(Main.MODID, "01_un_monde_parfait"))));
+        add(ModSoundEvents.CEST_LES_VACANCES, SoundDefinition.definition()
+                .with(sound(ResourceLocation.fromNamespaceAndPath(Main.MODID, "02_cest_les_vacances"))));
     }
 }

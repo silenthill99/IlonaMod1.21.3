@@ -16,7 +16,13 @@ public class ModItems {
             properties -> new Item(
                     properties
                             .stacksTo(1)
-                            .jukeboxPlayable(ModSoundEvents.convertToJukeboxSong("un_monde_parfait"))
+                            .jukeboxPlayable(ModSoundEvents.convertToJukeboxSong(ModSoundEvents.UN_MONDE_PARFAIT.get()))
+            ));
+    public static final DeferredItem<Item> CEST_LES_VACANCES = ITEMS.registerItem("cest_les_vacances",
+            properties -> new Item(
+                    properties
+                            .stacksTo(1)
+                            .jukeboxPlayable(ModSoundEvents.convertToJukeboxSong(ModSoundEvents.CEST_LES_VACANCES.get()))
             ));
 
     public static final DeferredItem<Item> ILONITE = ITEMS.registerItem("ilonite", Item::new);

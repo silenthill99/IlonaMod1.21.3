@@ -6,5 +6,7 @@
   "block.ilona_mod.ilonite_block": "Ilonite block",
   "block.ilona_mod.ilonite_ore": "Ilonite ore",
   "item.ilona_mod.ilonite": "Ilonite",
-  "block.ilona_mod.ilonite_fence": "Ilonite fence"
+  "block.ilona_mod.ilonite_fence": "Ilonite fence",
+  "ilona_mod.sounds.cest_les_vacances": "C'est les vacances",
+  "item.ilona_mod.cest_les_vacances": "§b02 - C'est les vacances"
 }

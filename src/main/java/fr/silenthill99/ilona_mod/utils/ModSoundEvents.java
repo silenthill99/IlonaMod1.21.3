@@ -10,12 +10,15 @@ import net.minecraft.world.item.JukeboxSong;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+@SuppressWarnings("DataFlowIssue")
 public class ModSoundEvents {
     public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(BuiltInRegistries.SOUND_EVENT, Main.MODID);
 
     public static final DeferredHolder<SoundEvent, SoundEvent> UN_MONDE_PARFAIT = registerSound("un_monde_parfait");
+    public static final DeferredHolder<SoundEvent, SoundEvent> CEST_LES_VACANCES = registerSound("cest_les_vacances");
 
-    public static ResourceKey<JukeboxSong> convertToJukeboxSong(String name) {
+    public static ResourceKey<JukeboxSong> convertToJukeboxSong(SoundEvent soundEvent) {
+        String name = BuiltInRegistries.SOUND_EVENT.getKey(soundEvent).getPath();
         return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(Main.MODID, name));
     }
 

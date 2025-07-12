@@ -3,6 +3,7 @@
     "#neoforge:needs_netherite_tool"
   ],
   "values": [
-    "#minecraft:incorrect_for_diamond_tool"
+    "#minecraft:incorrect_for_diamond_tool",
+    "#ilona_mod:needs_ilonite_tool"
   ]
 }

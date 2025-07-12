@@ -15,7 +15,8 @@ public class ItemModelGenerator extends ItemModelProvider {
     }
 
     Item[] CD = {
-            ModItems.UN_MONDE_PARFAIT.get()
+            ModItems.UN_MONDE_PARFAIT.get(),
+            ModItems.CEST_LES_VACANCES.get()
     };
 
     @Override

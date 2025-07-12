@@ -6,5 +6,7 @@
   "block.ilona_mod.ilonite_block": "Bloc d'ilonite",
   "block.ilona_mod.ilonite_ore": "Minerai d'ilonite",
   "item.ilona_mod.ilonite": "Ilonite",
-  "block.ilona_mod.ilonite_fence": "Barrière en ilonite"
+  "block.ilona_mod.ilonite_fence": "Barrière en ilonite",
+  "ilona_mod.sounds.cest_les_vacances": "C'est les vacances",
+  "item.ilona_mod.cest_les_vacances": "§b02 - C'est les vacances"
 }

@@ -23,7 +23,7 @@ public class BlockTagsGenerator extends BlockTagsProvider {
     protected void addTags(HolderLookup.@NotNull Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 ModBlocks.ILONITE_BLOCK.get(),
-                ModBlocks.ILONITE_STAIRS.get()
+                ModBlocks.ILONITE_ORE.get()
         );
 
         tag(Tags.Blocks.NEEDS_WOOD_TOOL);
@@ -43,7 +43,8 @@ public class BlockTagsGenerator extends BlockTagsProvider {
                 .addTag(BlockTags.INCORRECT_FOR_STONE_TOOL)
                 .remove(BlockTags.NEEDS_IRON_TOOL);
         tag(BlockTags.NEEDS_IRON_TOOL).add(
-                ModBlocks.ILONITE_STAIRS.get()
+                ModBlocks.ILONITE_BLOCK.get(),
+                ModBlocks.ILONITE_ORE.get()
         );
 
         tag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
@@ -54,13 +55,14 @@ public class BlockTagsGenerator extends BlockTagsProvider {
                 .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
                 .remove(Tags.Blocks.NEEDS_NETHERITE_TOOL);
 
-        tag(ModTags.ModBlockTags.NEEDS_ILONITE_TOOL).add(
-                ModBlocks.ILONITE_BLOCK.get()
-        );
-
+        tag(ModTags.ModBlockTags.NEEDS_ILONITE_TOOL);
         tag(ModTags.ModBlockTags.INCORRECT_FOR_ILONITE_TOOL).addTag(
                 BlockTags.INCORRECT_FOR_NETHERITE_TOOL
         ).remove(
+                ModTags.ModBlockTags.NEEDS_ILONITE_TOOL
+        );
+
+        tag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL).addTag(
                 ModTags.ModBlockTags.NEEDS_ILONITE_TOOL
         );
 

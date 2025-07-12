@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                     .displayItems((input, output) -> {
                         output.accept(ModItems.ALBUM_UMP);
                         output.accept(ModItems.UN_MONDE_PARFAIT);
+                        output.accept(ModItems.CEST_LES_VACANCES);
                     })
                     .build()
     );
