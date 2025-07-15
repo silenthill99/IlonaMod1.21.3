@@ -17,6 +17,8 @@ public class ModSoundEvents {
     public static final DeferredHolder<SoundEvent, SoundEvent> UN_MONDE_PARFAIT = registerSound("un_monde_parfait");
     public static final DeferredHolder<SoundEvent, SoundEvent> CEST_LES_VACANCES = registerSound("cest_les_vacances");
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> DANS_MA_FUSEE = registerSound("dans_ma_fusee");
+
     public static ResourceKey<JukeboxSong> convertToJukeboxSong(SoundEvent soundEvent) {
         String name = BuiltInRegistries.SOUND_EVENT.getKey(soundEvent).getPath();
         return ResourceKey.create(Registries.JUKEBOX_SONG, ResourceLocation.fromNamespaceAndPath(Main.MODID, name));

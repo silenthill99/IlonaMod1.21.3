@@ -5,6 +5,7 @@ import fr.silenthill99.ilona_mod.data.loot_tables.LootTableGenerator;
 import fr.silenthill99.ilona_mod.data.models.BlockStateGenerator;
 import fr.silenthill99.ilona_mod.data.models.ItemModelGenerator;
 import fr.silenthill99.ilona_mod.data.recipes.RecipeGenerator;
+import fr.silenthill99.ilona_mod.data.sounds.SoundDefinitionGenerator;
 import fr.silenthill99.ilona_mod.data.tags.BlockTagsGenerator;
 import fr.silenthill99.ilona_mod.data.tags.ItemTagsGenerator;
 import fr.silenthill99.ilona_mod.utils.ModSoundEvents;
