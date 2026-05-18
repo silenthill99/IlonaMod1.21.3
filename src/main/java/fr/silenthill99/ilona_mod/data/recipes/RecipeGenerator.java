@@ -3,13 +3,13 @@ package fr.silenthill99.ilona_mod.data.recipes;
 import fr.silenthill99.ilona_mod.Main;
 import fr.silenthill99.ilona_mod.init.ModBlocks;
 import fr.silenthill99.ilona_mod.init.ModItems;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.advancements.criterion.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -27,12 +27,12 @@ public class RecipeGenerator extends RecipeProvider {
     protected void buildRecipes() {
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.ILONITE_ORE), RecipeCategory.MISC, new ItemStack(ModItems.ILONITE.get()), 0.8f, 200)
                 .unlockedBy("unlock", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.ILONITE_ORE))
-                .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(Main.MODID, "ilonite_smelting")));
+                .save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(Main.MODID, "ilonite_smelting")));
 
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(ModBlocks.ILONITE_ORE), RecipeCategory.MISC, new ItemStack(ModItems.ILONITE.get()).getItem(),
                 0.8f, 100)
                         .unlockedBy("unlock", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.ILONITE_ORE))
-                                .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(Main.MODID, "ilonite_blasting")));
+                                .save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(Main.MODID, "ilonite_blasting")));
 
         HolderLookup.RegistryLookup<Item> items = this.registries.lookupOrThrow(Registries.ITEM);
         ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, new ItemStack(ModBlocks.ILONITE_BLOCK.get()))

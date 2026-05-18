@@ -28,5 +28,5 @@ public class ModItems {
     public static final DeferredItem<Item> ILONITE = ITEMS.registerItem("ilonite", Item::new);
 
     public static final DeferredItem<Item> ILONITE_PICKAXE = ITEMS.registerItem("ilonite_pickaxe",
-            properties -> new PickaxeItem(ModToolMaterial.ILONITE_TOOLS, 1, -2.8f, properties));
+            properties -> new Item(properties.pickaxe(ModToolMaterial.ILONITE_TOOLS, 1, -2.8f)));
 }
